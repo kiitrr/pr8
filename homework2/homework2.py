@@ -1,25 +1,15 @@
-def is_integer(n):
+while True:
     try:
-        float_n = float(n)
-        return float_n.is_integer()
+        # Ввод первого числа
+        a = float(input("Введите первое целое число (a): "))
+        # Ввод второго числа
+        b = float(input("Введите второе целое число (b): "))
+        
+        # Преобразуем числа в целые
+        a = int(a)
+        b = int(b)
+
+        # Вывод суммы
+        print("Сумма:", a + b)
     except ValueError:
-        return False
-
-
-a = input("Введите первое число (a): ")
-b = input("Введите второе число (b): ")
-
-
-if is_integer(a) and is_integer(b):
-    a = int(a)
-    b = int(b)
-
-
-    start = min(a, b) + 1
-    end = max(a, b)
-
-
-    for number in range(start, end):
-        print(number)
-else:
-    print("Ошибка: оба введенных числа должны быть целыми.")
+        print("Ошибка: пожалуйста, введите корректные целые числа.")
