@@ -8,3 +8,8 @@ def is_integer(n):
 
 a = input("Введите первое число (a): ")
 b = input("Введите второе число (b): ")
+
+
+if is_integer(a) and is_integer(b):
+    a = int(a)
+    b = int(b)
