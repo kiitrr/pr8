@@ -1,4 +1,4 @@
-# Функция для рисования квадрата размером size на size
+
 def draw_square(size):
     for _ in range(size):
         print(' * ' * size)
