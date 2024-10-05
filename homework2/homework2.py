@@ -1,11 +1,25 @@
+def is_integer(n):
+    try:
+        float_n = float(n)
+        return float_n.is_integer()
+    except ValueError:
+        return False
 
-def draw_square(size):
-    for _ in range(size):
-        print('*' * size)
-size_input = input("Введите размер квадрата (целое число): ")
 
-if size_input.isdigit() and int(size_input) == 10:
-    size = int(size_input)
-    draw_square(size)
+a = input("Введите первое число (a): ")
+b = input("Введите второе число (b): ")
+
+
+if is_integer(a) and is_integer(b):
+    a = int(a)
+    b = int(b)
+
+
+    start = min(a, b) + 1
+    end = max(a, b)
+
+
+    for number in range(start, end):
+        print(number)
 else:
-    print("Ошибка: размер квадрата должен быть целым числом 10.")
+    print("Ошибка: оба введенных числа должны быть целыми.")
